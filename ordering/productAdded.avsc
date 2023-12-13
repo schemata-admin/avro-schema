@@ -1,0 +1,75 @@
+{
+    "name": "product_added",
+    "namespace": "org.amce.ecommerce.ordering",
+    "type": "record",
+    "doc": "This event is triggered whenever a visitor/customer adds a product to their shopping cart. The following properties are supported by this event",
+    "owner": "surya",
+    "domain": "E-commerce",
+    "fields": [
+        {
+            "name": "cart_id",
+            "type": "string",
+            "doc": "Contains the cart ID of the cart to which the product was added"
+        },
+        {
+            "name": "product_id",
+            "type": "string",
+            "doc": "Contains the database ID of the product being viewed"
+        },
+        {
+            "name": "sku",
+            "type": "string",
+            "doc": "Contains the SKU of the product"
+        },
+        {
+            "name": "category",
+            "type": "string",
+            "doc": "Contains the category of the product"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "doc": "Contains the name of the product being viewed"
+        },
+        {
+            "name": "brand",
+            "type": "string",
+            "doc": "Contains the name of the brand associated with the product"
+        },
+        {
+            "name": "varient",
+            "type": "string",
+            "doc": "Contains the name of the variant associated with the product"
+        },
+        {
+            "name": "price",
+            "type": "double",
+            "doc": "Contains the price of the product being viewed"
+        },
+        {
+            "name": "quality",
+            "type": "int",
+            "doc": "Contains the quantity of the product"
+        },
+        {
+            "name": "coupon",
+            "type": "string",
+            "doc": "Contains the coupon code associated with a product"
+        },
+        {
+            "name": "position",
+            "type": "int",
+            "doc": "Contains the position of the product in the product list"
+        },
+        {
+            "name": "url",
+            "type": "string",
+            "doc": "Contains the URL of the product page"
+        },
+        {
+            "name": "image_url",
+            "type": "string",
+            "doc": "Contains the image URL of the product"
+        }
+    ]
+}

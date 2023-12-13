@@ -1,0 +1,180 @@
+{
+  "type" : "record",
+  "name" : "order_cancelled",
+  "namespace" : "org.amce.ecommerce.ordering",
+  "doc" : "This event is triggered whenever an order is canceled. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "order_id",
+    "type" : "string",
+    "doc" : "Contains the order ID or transaction ID, whichever is applicable",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "affiliation",
+    "type" : "string",
+    "doc" : "Contains the store or affiliation details from where the transaction was started",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "total",
+    "type" : "int",
+    "doc" : "Contains the details of the revenue with the discount and coupons factored in",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "revenue",
+    "type" : "double",
+    "doc" : "Contains the revenue associated with the transaction, excluding the shipping and tax details",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "shipping",
+    "type" : "int",
+    "doc" : "Contains the shipping cost associated with the order or transaction",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "tax",
+    "type" : "int",
+    "doc" : "Contains the total tax associated with the order or the transaction",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "discount",
+    "type" : "double",
+    "doc" : "Contains the total discount associated with the transaction",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "coupen",
+    "type" : "string",
+    "doc" : "Contains details of the transaction coupon which can be redeemed with the transaction",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "currency",
+    "type" : "string",
+    "doc" : "Contains the currency code associated with an order or transaction",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "products",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "product",
+        "namespace" : "org.amce.ecommerce",
+        "doc" : "Contains the product details",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "doc" : "Contains the product ID displayed on the list",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "sku",
+          "type" : "string",
+          "doc" : "Contains the SKU (Stock Keeping Unit) of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "category",
+          "type" : "string",
+          "doc" : "Contains the category of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "name",
+          "type" : "string",
+          "doc" : "Contains the name of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "brand",
+          "type" : "string",
+          "doc" : "Contains the name of the brand associated with the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "varient",
+          "type" : "string",
+          "doc" : "Contains the name of the variant of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "price",
+          "type" : "double",
+          "doc" : "Contains the price of the product being viewed (in USD)",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "quality",
+          "type" : "int",
+          "doc" : "Contains the quantity of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "coupon",
+          "type" : "string",
+          "doc" : "Contains the coupon code associated with a product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "position",
+          "type" : "int",
+          "doc" : "Contains the position of the product in the product list",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "url",
+          "type" : "string",
+          "doc" : "Contains the URL of the product page",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "image_url",
+          "type" : "string",
+          "doc" : "Contains the image URL of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        } ],
+        "owner" : "Ananth",
+        "schema_type" : "UNKNOWN",
+        "domain" : "core",
+        "status" : "Active"
+      }
+    },
+    "doc" : "Contains the array of products displayed in the product list",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  } ],
+  "owner" : "Ananth",
+  "schema_type" : "UNKNOWN",
+  "domain" : "Core",
+  "status" : "Active",
+  "quality_rule_sql" : "{\"sql\":\"(order_id not like :order_id_1 and (tax = :tax_1))\",\"params\":{\"order_id_1\":\"%2\",\"tax_1\":\"100\"}}",
+  "quality_rule_cel" : "!order_id.endsWith(\"2\") && (tax == \"100\")"
+}

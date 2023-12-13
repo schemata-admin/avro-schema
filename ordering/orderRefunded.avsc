@@ -1,0 +1,28 @@
+{
+  "type" : "record",
+  "name" : "order_refunded",
+  "namespace" : "org.amce.ecommerce.ordering",
+  "doc" : "This event is triggered whenever an order is refunded. You must include all items in the cart as Order Refunded event’s properties, with the same properties as the Order Completed event",
+  "fields" : [ {
+    "name" : "order_id",
+    "type" : "string",
+    "doc" : "Contains the order ID or transaction ID",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "order_name",
+    "type" : "string",
+    "doc" : "This is an order name",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  } ],
+  "owner" : "Ananth",
+  "schema_type" : "UNKNOWN",
+  "domain" : "Core",
+  "status" : "Active",
+  "subscribers" : [ "Sales Team" ],
+  "quality_rule_sql" : "{\"sql\":\"(order_id >= :order_id_1)\",\"params\":{\"order_id_1\":\"-1\"}}",
+  "quality_rule_cel" : "order_id >= \"-1\""
+}

@@ -1,0 +1,33 @@
+{
+    "name": "payment_info_entered",
+    "namespace": "org.amce.ecommerce.ordering",
+    "type": "record",
+    "doc": "This event is triggered whenever payment information is successfully entered to complete an order or transaction. The following properties are supported by this event",
+    "fields": [
+        {
+            "name": "checkout_id",
+            "type": "string",
+            "doc": "Contains the checkout transaction ID"
+        },
+        {
+            "name": "order_id",
+            "type": "string",
+            "doc": "An optional string that contains the order ID"
+        },
+        {
+            "name": "step",
+            "type": "int",
+            "doc": "Contains the number associated with the checkout process step"
+        },
+        {
+            "name": "shipping_method",
+            "type": "string",
+            "doc": "Contains the information associated with the chosen shipping method"
+        },
+        {
+            "name": "payment_method",
+            "type": "string",
+            "doc": "Contains the payment method information"
+        }
+    ]
+}

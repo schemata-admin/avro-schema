@@ -1,0 +1,40 @@
+{
+  "type" : "record",
+  "name" : "promotion_reviewed",
+  "namespace" : "org.amce.ecommerce.promotion",
+  "doc" : "This event is triggered whenever a customer reviews a product. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "product_id",
+    "type" : "string",
+    "doc" : "Contains the ID of the product being reviewed",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "review_id",
+    "type" : "string",
+    "doc" : "Contains the unique ID of the review being posted by the customer",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "review_body",
+    "type" : "string",
+    "doc" : "Contains the body or the content of the review posted by the customer",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "rating",
+    "type" : "long",
+    "doc" : "Contains the rating of the product added by the customer in the review",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "author",
+    "type" : "string",
+    "doc" : "Contains the author name",
+    "is_pii" : "true",
+    "is_classified" : "true"
+  } ],
+  "owner" : "test",
+  "schema_type" : "UNKNOWN",
+  "status" : "Active"
+}

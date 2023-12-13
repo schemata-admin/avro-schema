@@ -1,0 +1,28 @@
+{
+    "name": "checkout_step_viewed",
+    "namespace": "org.amce.ecommerce.ordering",
+    "type": "record",
+    "doc": "This event is triggered whenever a checkout step is viewed. The following properties are supported by this event",
+    "fields": [
+        {
+            "name": "checkout_id",
+            "type": "string",
+            "doc": "Contains the checkout transaction ID"
+        },
+        {
+            "name": "step",
+            "type": "int",
+            "doc": "Contains the number associated with the checkout process step"
+        },
+        {
+            "name": "shipping_method",
+            "type": "string",
+            "doc": "Contains the information associated with the chosen shipping method"
+        },
+        {
+            "name": "payment_method",
+            "type": "string",
+            "doc": "Contains the payment method information"
+        }
+    ]
+}
