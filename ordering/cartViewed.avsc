@@ -1,0 +1,120 @@
+{
+  "type" : "record",
+  "name" : "cart_viewed",
+  "namespace" : "org.amce.ecommerce.ordering",
+  "doc" : "This event is triggered whenever a visitor or customer views their shopping cart. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "cart_id",
+    "type" : "string",
+    "doc" : "Contains the cart ID of the cart to which the product was added",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "products",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "product",
+        "namespace" : "org.amce.ecommerce",
+        "doc" : "Contains the product details",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "doc" : "Contains the product ID displayed on the list",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "sku",
+          "type" : "string",
+          "doc" : "Contains the SKU (Stock Keeping Unit) of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "category",
+          "type" : "string",
+          "doc" : "Contains the category of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "name",
+          "type" : "string",
+          "doc" : "Contains the name of the product being viewed",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "brand",
+          "type" : "string",
+          "doc" : "Contains the name of the brand associated with the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "varient",
+          "type" : "string",
+          "doc" : "Contains the name of the variant of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "price",
+          "type" : "double",
+          "doc" : "Contains the price of the product being viewed (in USD)",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "quality",
+          "type" : "int",
+          "doc" : "Contains the quantity of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "coupon",
+          "type" : "string",
+          "doc" : "Contains the coupon code associated with a product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "position",
+          "type" : "int",
+          "doc" : "Contains the position of the product in the product list",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "url",
+          "type" : "string",
+          "doc" : "Contains the URL of the product page",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        }, {
+          "name" : "image_url",
+          "type" : "string",
+          "doc" : "Contains the image URL of the product",
+          "is_pii" : "false",
+          "is_classified" : "false",
+          "deprecated" : "false"
+        } ],
+        "owner" : "Ananth",
+        "schema_type" : "UNKNOWN",
+        "domain" : "core",
+        "status" : "Active"
+      }
+    },
+    "doc" : "Contains the array of products displayed in the product list",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  } ],
+  "schema_type" : "UNKNOWN",
+  "status" : "Active"
+}

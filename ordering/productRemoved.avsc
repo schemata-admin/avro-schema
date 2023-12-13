@@ -1,0 +1,94 @@
+{
+  "type" : "record",
+  "name" : "product_removed",
+  "namespace" : "org.amce.ecommerce.ordering",
+  "doc" : "This event is triggered whenever a product is removed from the shopping cart by the customer. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "coupon_desc",
+    "type" : "string",
+    "doc" : "Adding more details for coupon",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "url",
+    "type" : "string",
+    "doc" : "Contains the URL of the product page",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "image_url",
+    "type" : "string",
+    "doc" : "Contains the image URL of the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "cart_id",
+    "type" : "string",
+    "doc" : "Contains the cart ID of the cart to which the product was added",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "product_id",
+    "type" : "string",
+    "doc" : "Contains the database ID of the product being viewed",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "sku",
+    "type" : "string",
+    "doc" : "Contains the SKU of the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "category",
+    "type" : "string",
+    "doc" : "Contains the category of the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "name",
+    "type" : "string",
+    "doc" : "Contains the name of the product being viewed",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "brand",
+    "type" : "string",
+    "doc" : "Contains the name of the brand associated with the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "varient",
+    "type" : "string",
+    "doc" : "Contains the name of the variant associated with the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "price",
+    "type" : "double",
+    "doc" : "Contains the price of the product being viewed",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "quality",
+    "type" : "int",
+    "doc" : "Contains the quantity of the product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "coupon",
+    "type" : "string",
+    "doc" : "Contains the coupon code associated with a product",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "position",
+    "type" : "int",
+    "doc" : "Contains the position of the product in the product list",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  } ],
+  "owner" : "Growth Team",
+  "schema_type" : "UNKNOWN",
+  "status" : "Active"
+}

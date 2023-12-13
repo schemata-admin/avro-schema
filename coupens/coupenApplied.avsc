@@ -1,0 +1,33 @@
+{
+    "name": "coupon_applied",
+    "namespace": "org.amce.ecommerce",
+    "type": "record",
+    "doc": "This event is triggered whenever a coupon is applied to a cart or a transaction successfully. The following properties are supported by this event",
+    "fields": [
+        {
+            "name": "order_id",
+            "type": ["null", "string"],
+            "doc": "Contains the order ID or the transaction ID, if applicable"
+        },
+        {
+            "name": "cart_id",
+            "type": ["null", "string"],
+            "doc": "Contains the cart ID, if applicable"
+        },
+        {
+            "name": "coupon_id",
+            "type": "string",
+            "doc": "Contains the cart ID"
+        },
+        {
+            "name": "coupon_name",
+            "type": "string",
+            "doc": "Contains the name of the coupon"
+        },
+        {
+            "name": "discount",
+            "type": "string",
+            "doc": "Contains the amount of discount availed by applying the coupon"
+        }
+    ]
+}

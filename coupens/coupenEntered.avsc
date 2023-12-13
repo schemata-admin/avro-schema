@@ -1,0 +1,27 @@
+{
+  "type" : "record",
+  "name" : "coupon_entered",
+  "namespace" : "org.amce.ecommerce",
+  "doc" : "This event is triggered whenever a coupon is entered by the customer, either on a cart or during the order/transaction. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "order_id",
+    "type" : [ "null", "string" ],
+    "doc" : "Contains the order ID or the transaction ID, if applicable",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  }, {
+    "name" : "coupon_id",
+    "type" : "string",
+    "doc" : "Contains the cart ID",
+    "is_pii" : "true",
+    "is_classified" : "true"
+  }, {
+    "name" : "cart_id",
+    "type" : [ "string", "null" ],
+    "doc" : "Contains the cart ID, if applicable",
+    "is_pii" : "false",
+    "is_classified" : "false"
+  } ],
+  "owner" : "Core",
+  "schema_type" : "UNKNOWN"
+}

@@ -1,0 +1,97 @@
+{
+  "type" : "record",
+  "name" : "product_shared",
+  "namespace" : "org.amce.ecommerce.shared",
+  "doc" : "This event is triggered whenever a customer shares a product. The following properties are supported by this event",
+  "fields" : [ {
+    "name" : "share_via",
+    "type" : "string",
+    "doc" : "Contains information on the method of sharing the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "share_message",
+    "type" : "string",
+    "doc" : "Contains the message sent by the customer",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "recipient",
+    "type" : "string",
+    "doc" : "Contains information on the recipient with whom the product is shared",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "product_id",
+    "type" : "string",
+    "doc" : "Contains the Database ID of the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "sku",
+    "type" : "string",
+    "doc" : "Contains the SKU of the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "category",
+    "type" : "string",
+    "doc" : "Contains the category of the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "name",
+    "type" : "string",
+    "doc" : "Contains the name of the product being viewed",
+    "is_pii" : "true",
+    "is_classified" : "true",
+    "deprecated" : "false"
+  }, {
+    "name" : "brand",
+    "type" : "string",
+    "doc" : "Contains the name of the brand associated with the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "varient",
+    "type" : "string",
+    "doc" : "Contains the name of the variant associated with the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "price",
+    "type" : "double",
+    "doc" : "Contains the price of the product being viewed",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "url",
+    "type" : "string",
+    "doc" : "Contains the URL of the product page",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  }, {
+    "name" : "image_url",
+    "type" : "string",
+    "doc" : "Contains the image URL of the product",
+    "is_pii" : "false",
+    "is_classified" : "false",
+    "deprecated" : "false"
+  } ],
+  "owner" : "Ananth",
+  "schema_type" : "UNKNOWN",
+  "domain" : "Core",
+  "status" : "Active",
+  "subscribers" : [ "Customer Support Team" ],
+  "quality_rule_base" : "(recipient = 'end' and price = '10000')"
+}

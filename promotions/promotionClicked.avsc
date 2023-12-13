@@ -1,0 +1,28 @@
+{
+    "name": "promotion_clicked",
+    "namespace": "org.amce.ecommerce.promotion",
+    "type": "record",
+    "doc": "This event is fired whenever a visitor clicks on a promotional offer on the website or mobile app. The following properties are supported by this event",
+    "fields": [
+        {
+            "name": "promotion_id",
+            "type": "string",
+            "doc": "Contains the ID of the promotion"
+        },
+        {
+            "name": "creative",
+            "type": "string",
+            "doc": "Contains the creative details of the promotion"
+        },
+        {
+            "name": "name",
+            "type": "string",
+            "doc": "Contains the name of the promotion"
+        },
+        {
+            "name": "position",
+            "type": "string",
+            "doc": "Contains information about the promotion’s position on the website/app"
+        }
+    ]
+}
